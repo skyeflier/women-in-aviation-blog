@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Job Board!</title>
+    <title>Aviatrix Blog</title>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
@@ -20,7 +20,7 @@
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
                 <button class="no-button" id="logout">logout</button>
-                <button onclick="window.location.href='/job/new'" class="no-button">Create a new job</button>
+                <button onclick="window.location.href='/blog/new'" class="no-button">Create a new blog</button>
                 {{else}}
                 <a href="/login">login</a>
                 {{/if}}
