@@ -44,10 +44,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(routes);
+app.use('/', routes);
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Clear prop! Now listening for that sweet Lycoming purr...'));
+    app.listen(PORT, () => console.log('Clear prop! Now listening for that sweet Lycoming purr... http://localhost:' + PORT));
 });
 
 console.log('Welcome to the Women in Aviation Blog! We can not wait to hear your stories as a woman in aviation. ');

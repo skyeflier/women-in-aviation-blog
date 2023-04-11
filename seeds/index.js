@@ -13,10 +13,10 @@ const seedDatabase = async () => {
     });
     const createdUsers = await User.findAll()
 
-    for (const blogData of blogsData) {
+    for (const blog of blogData) {
         await Blogs.create({
-            ...blogData,
-            type: blogData.type,
+            ...blog,
+            type: blog.type,
             user_id: createdUsers[Math.floor(Math.random() * createdUsers.length)].id,
         });
     }

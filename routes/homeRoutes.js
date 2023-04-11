@@ -24,5 +24,8 @@ router.get('/newBlog', (req, res) => {
 
     res.render('newBlogForm');
 });
+router.get('/dashboard', (req, res) => {
+    res.render("dashboard")
+});
 
 module.exports = router;
