@@ -14,8 +14,6 @@ router.post('/users', async (req, res) => {
     } catch (err) {
         res.status(400).json(err);
     }
-    console.log("user post test")
-    console.log(req)
 });
 
 router.post('/login', async (req, res) => {
@@ -25,7 +23,7 @@ router.post('/login', async (req, res) => {
         if (!userData) {
             res
                 .status(400)
-                .json({ message: 'Mayday! Mayday! The email or password provided was incorrect... Please try again!' });
+                .json({ message: 'The email or password provided was incorrect... Please try again!' });
             return;
         }
 
@@ -34,7 +32,7 @@ router.post('/login', async (req, res) => {
         if (!validPassword) {
             res
                 .status(400)
-                .json({ message: 'Mayday! Mayday! The email or password provided was incorrect... Please try again!' });
+                .json({ message: 'The email or password provided was incorrect... Please try again!' });
             return;
         }
 
@@ -42,7 +40,7 @@ router.post('/login', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.json({ user: userData, message: 'Get ready for takeoff...you are logged in!' });
+            res.json({ user: userData, message: 'Yay! You are logged in...' });
         });
 
     } catch (err) {
