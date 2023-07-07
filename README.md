@@ -38,11 +38,10 @@ This blog site was built using the Model-View-Controller (MVC) paradigm and the 
 Handlebars.js as the templating language
 Sequelize as the ORM
 express-session npm package for authentication
-License
-This project is licensed under the MIT License.
+
 
 ## License
-MIT License
+This project is licensed under the MIT License.
 
 ## Features
 User authentication with sign up, login, and logout functionality
